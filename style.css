@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+.card-container{
+  background-color: hsl(216, 50%, 16%);
+  width: 343px;
+  height: 600px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 15px 35px 30px hsl(217deg 54% 10% / 90%);
+}
+
+.card-image{
+  border-radius: 10px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img{
+  width: 100%;
+}
+
+.eye-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+}
+.eye-icon img{
+  width: 48px;
+}
+.eye-icon:hover{
+  opacity: .6;
+}
+
+.card-title{
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  margin-block: 1.5rem;
+}
+
+.card-description{
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+.card-progress-info{
+  margin-block: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.card-progress-info .health{
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-progress-info .time{
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-footer{
+  border-top: 1px solid hsl(215, 32%, 27%);
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+}
+
+.card-footer img{
+  width: 35px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.card-footer .creator-name{
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 5px;
+}
+
+.card-footer .creator-name span{
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 375px){
+  .card-container{
+    transform: scale(.9);
+  }
+}
